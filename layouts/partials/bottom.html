@@ -1,0 +1,17 @@
+<script>
+
+        function toggleMenuList() {
+            var element = document.getElementById("nav-list");
+            element.classList.toggle("hidden");
+            console.log('toggle');
+
+        }
+        window.onload = function () {
+            var div = document.getElementById("hamburger")
+            div.onclick = function () {
+                toggleMenuList();
+            }
+        }
+    </script>
+</body>
+</html>

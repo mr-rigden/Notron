@@ -1,0 +1,46 @@
+{{ define "main" }}
+<div class="content">
+	<div class="content-header">
+		<h1 class="content-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+		<span class="content-date">{{ .Date.Format "January 1, 2001" }}</span>
+	</div>
+	<div class="content-body">
+		{{ .Content }}
+	</div>
+	<div class="content-footer">
+
+		<ul class="share-buttons">
+			<li>
+				<a href="https://twitter.com/intent/tweet?source=&text=:%20" target="_blank" title="Tweet" 
+				onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ' by @mr_rigden %0A'  + encodeURIComponent(document.URL)); return false;">
+				<img class="social" alt="Share on Twitter" src="/images/twitter.svg" /></a>
+			</li>
+
+
+
+
+			<li><a href="https://www.facebook.com/sharer/sharer.php?u=&quote=" title="Share on Facebook" target="_blank" 
+				onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&quote=' + encodeURIComponent(document.URL)); return false;">
+				<img class="social" alt="Share on Facebook" src="/images/facebook.svg" /></a></li>
+
+
+			<li><a href="http://www.linkedin.com/shareArticle?mini=true&url=&title=&summary=&source=" target="_blank" title="Share on LinkedIn" 
+				onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;">
+				<img class="social" alt="Share on LinkedIn" src="/images/linkedin.svg" /></a></li>
+		</ul>
+		
+		{{ $related := .Site.RegularPages.Related . | first 5 }}
+{{ with $related }}
+<ul class="content-related">
+	<h2>See Also</h2>
+	{{ range . }}
+	<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+	{{ end }}
+</ul>
+{{ end }}
+
+
+	</div>
+</div>
+{{ end }}
+

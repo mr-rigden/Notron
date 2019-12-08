@@ -1,0 +1,8 @@
+
+{{ partial "top" . }}
+	{{ partial "nav" . }}
+	<main>
+	{{ block "main" . }}{{ end }}
+	</main>
+	{{ partial "footer" . }}
+{{ partial "bottom" . }}

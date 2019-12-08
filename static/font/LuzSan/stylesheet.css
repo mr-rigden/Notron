@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'LuzSans';
+    src: url('LuzSans-Bold.woff2') format('woff2'),
+        url('LuzSans-Bold.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LuzSans';
+    src: url('LuzSans-LightItalic.woff2') format('woff2'),
+        url('LuzSans-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'LuzSans';
+    src: url('LuzSans-HeavyItalic.woff2') format('woff2'),
+        url('LuzSans-HeavyItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'LuzSans-Book';
+    src: url('LuzSans-Book.woff2') format('woff2'),
+        url('LuzSans-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LuzSans';
+    src: url('LuzSans-Heavy.woff2') format('woff2'),
+        url('LuzSans-Heavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LuzSans-BookItalic';
+    src: url('LuzSans-BookItalic.woff2') format('woff2'),
+        url('LuzSans-BookItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'LuzSans';
+    src: url('LuzSans-Light.woff2') format('woff2'),
+        url('LuzSans-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LuzSans';
+    src: url('LuzSans-BoldItalic.woff2') format('woff2'),
+        url('LuzSans-BoldItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'LuzSans';
+    src: url('LuzSans-Medium.woff2') format('woff2'),
+        url('LuzSans-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LuzSans';
+    src: url('LuzSans-MediumItalic.woff2') format('woff2'),
+        url('LuzSans-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+

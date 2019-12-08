@@ -1,0 +1,28 @@
+<div class="nav-bar">
+	<div class="nav-left">
+		<a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+		
+	</div>
+
+	<div class="nav-right">
+		<div id="hamburger">
+			<img src="/images/white-hamburger.svg" alt="">
+		</div>
+	</div>
+</div>
+
+<div id="nav-list" class="hidden">
+<ul>
+	{{ with .Site.Menus.main }}
+		{{ range . }}
+		<li>
+			<a href="{{ .URL | relURL }}">{{ .Name }}</a>
+		</li>
+		{{ end }}
+	{{ end }}
+</ul>
+
+</div>
+
+
+
