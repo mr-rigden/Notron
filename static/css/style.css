@@ -382,12 +382,11 @@ html {
 
 }
 
-H1
 
 a:link,
 a:visited {
     text-decoration: none;
-    color:red;
+    color:blue;
     font-weight: bold;
 
 }
