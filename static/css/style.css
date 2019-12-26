@@ -438,7 +438,8 @@ main {
 }
 
 #nav-list {
-    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: right;
 
 }
 
