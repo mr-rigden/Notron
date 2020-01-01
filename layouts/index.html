@@ -1,7 +1,29 @@
 {{ define "main" }}
-{{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
-{{ range $paginator.Pages }}
-	{{ .Render "summary" }}
-{{ end }}
-{{ partial "pagination.html" . }}
+<div class="content">
+	<div class="content-body">
+		{{ .Content }}
+	</div>
+	<div class="content-footer">
+		<ul class="share-buttons">
+			<li>
+				<a href="https://twitter.com/intent/tweet?source=&text=:%20" target="_blank" title="Tweet" 
+				onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ' by {{ .Site.Params.twitter }} %0A'  + encodeURIComponent(document.URL)); return false;">
+				<img class="social" alt="Share on Twitter" src="/images/twitter.svg" /></a>
+			</li>
+
+			<li><a href="https://www.facebook.com/sharer/sharer.php?u=&quote=" title="Share on Facebook" target="_blank" 
+				onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&quote=' + encodeURIComponent(document.URL)); return false;">
+				<img class="social" alt="Share on Facebook" src="/images/facebook.svg" /></a></li>
+
+
+			<li><a href="http://www.linkedin.com/shareArticle?mini=true&url=&title=&summary=&source=" target="_blank" title="Share on LinkedIn" 
+				onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;">
+				<img class="social" alt="Share on LinkedIn" src="/images/linkedin.svg" /></a></li>
+		</ul>
+	</div>
+
+</div>
+
+
+
 {{ end }}

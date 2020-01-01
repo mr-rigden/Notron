@@ -1,8 +1,11 @@
 {{ define "main" }}
-
-
-{{ range .Paginator.Pages }}
-{{ .Render "summary" }}
+{{ if eq .Title "Posts" }}
+{{ else }}
+<h2>Posts Tagged: {{ .Title }}</h2>
+{{ end }}
+{{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+{{ range $paginator.Pages }}
+	{{ .Render "summary"  }}
 {{ end }}
 {{ partial "pagination.html" . }}
 {{ end }}
