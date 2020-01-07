@@ -380,10 +380,25 @@ html {
     font-family: 'Lato', sans-serif;
 }
 
-html {
-  font-size: 18px;
+body {
+  font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: normal;
+  color: #111111;
 }
 
+html {
+  font-size: 16px;
+}
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+  }
+}
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 22px;
+  }
+}
 
 
 
@@ -399,12 +414,12 @@ h1 {
 a:link,
 a:visited {
     text-decoration: none;
-    color:blue;
+    color:#0074D9;
     font-weight: bold;
 
 }
 
-main {
+body {
     padding-right: 1rem;
     padding-left: 1rem;
     max-width: 35rem;
@@ -418,28 +433,26 @@ main {
 }
 
 .nav-bar {
+  font-size: 18px;
   font-weight: bold;
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: #111111;
     display: flex;
     margin: 0 auto;
-    padding-top: .5rem;
-    padding-bottom: .5rem;
-    padding-right: 1rem;
-    padding-left: 1rem;
-
 }
 
 
 .nav-right {
     flex: 1;
     text-align: right;
+    padding-top: .5em;
+
 
 
 }
 
 .nav-left {
-    padding-top: .4rem;
+    padding-top: .60em;
     text-transform: uppercase;
     font-weight: bold;
     flex: 0 0 90%;
@@ -449,11 +462,11 @@ main {
 .nav-bar a:link,
 .nav-bar a:visited {
     text-decoration: none;
-    color:white;
+    color:#111111;
 }
 
 #nav-list {
-    padding-right: 1rem;
+    padding-right: 1em;
     text-align: right;
 
 }
@@ -461,7 +474,7 @@ main {
 #nav-list  a:link,
 #nav-list  a:visited {
     text-decoration: none;
-    color:black;
+    color: #111111;
     text-transform: uppercase;
     font-weight: bold;
 
@@ -469,29 +482,32 @@ main {
 
 
 #nav-list ul {
+  font-size: 18px;
+
     margin: 0px;
     list-style-type: none;
     padding-inline-start: 0px;
+
 }
 
 #nav-list li {
-    padding-top: 1rem;
+    padding-top: 2em;
 
 }
 
 #nav-list li:last-child {
-    padding-bottom: 1rem;
+    padding-bottom: 2em;
 
 }
 
 
 .content {
-  padding-bottom: 1rem;
 
 }
 
 .content-header  {
     text-transform: uppercase;
+
 }
 
 .content-title {
@@ -612,7 +628,7 @@ pre {
 .shout {
     font-size: 1.5rem;
     text-transform: uppercase;
-    background-color: black;
+    background-color: #111111;
     font-weight: bold;
     text-align: center;
     color: white;
@@ -628,4 +644,23 @@ pre {
 }
 .terms li {
   padding-bottom: 1rem;
+}
+
+
+#hamburger {
+  position: relative;
+  display: inline-block;
+  width: 1.25em;
+  height: 0.8em;
+  border-top: 0.2em solid #111111;
+  border-bottom: 0.2em solid #111111;
+}
+
+#hamburger:before {
+  content: "";
+  position: absolute;
+  top: 0.3em;
+  left: 0px;
+  width: 100%;
+  border-top: 0.2em solid #111111;
 }
