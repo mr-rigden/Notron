@@ -1,12 +1,4 @@
-{{ if .IsPage }}
 <meta name="description" content="{{ .Summary | truncate 150 }}">
-
-
-{{ else }}
-<meta name="description" content="{{ $.Site.Params.description }}">
-
-
-{{ end }}
 <link rel="canonical" href="{{ .Permalink }}" />
 
 
