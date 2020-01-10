@@ -1,4 +1,8 @@
+
+{{ if .Content }}
 <meta name="description" content="{{ .Summary | truncate 150 }}">
 <link rel="canonical" href="{{ .Permalink }}" />
 
-
+{{ else }}
+<meta name="robots" content="noindex">
+{{ end }}
