@@ -382,6 +382,7 @@ html {
 
 body {
   font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: futura-pt, sans-serif;
   font-weight: normal;
   color: #111111;
 }
@@ -396,7 +397,7 @@ html {
 }
 @media screen and (min-width: 1000px) {
   html {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 
@@ -433,12 +434,13 @@ body {
 }
 
 .nav-bar {
-  font-size: 18px;
+  font-size: 100%;
   font-weight: bold;
     background-color: white;
     color: #111111;
     display: flex;
     margin: 0 auto;
+    padding-top: .25rem;
 }
 
 
@@ -452,7 +454,7 @@ body {
 }
 
 .nav-left {
-    padding-top: .60em;
+    padding-top: .65em;
     text-transform: uppercase;
     font-weight: bold;
     flex: 0 0 90%;
@@ -589,7 +591,10 @@ body {
 }
 
 pre {
-    padding: 1rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     overflow-x: auto;
 }
 
@@ -731,4 +736,8 @@ max-width: 25rem;
 
 .episodes li {
   padding-bottom: 1em;
+}
+code {
+  font-family: source-code-pro, monospace;
+  font-size: 80%;
 }
